@@ -1,0 +1,28 @@
+{
+  "name": "again-client",
+  "private": true,
+  "version": "0.0.1",
+  "description": "要你背八千",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jih",
+  "license": "ISC",
+  "main": "app/index.html",
+  "window": {
+    "toolbar": true,
+    "width": 1024,
+    "height": 700,
+    "min_height": 400,
+    "min_width": 400
+  },
+  "dependencies": {
+    "mysql": "^2.5.5",
+    "sequelize": "^2.0.4"
+  },
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-install": "^0.2.0"
+  }
+}
