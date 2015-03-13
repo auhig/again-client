@@ -1,15 +1,14 @@
 'use strict';
 
 module.exports = function (sequelize, DataTypes) {
-    return sequelize.define("user", {
+    return sequelize.define("wordbook", {
         id: {
             type: DataTypes.BIGINT,
             primaryKey: true,
             autoIncrement: true
         },
-        username: DataTypes.STRING,
-        password: DataTypes.STRING,
-        nickname: DataTypes.STRING
+        name: DataTypes.STRING,
+        description: DataTypes.TEXT
     }, {
         freezeTableName: true,
         underscored: true

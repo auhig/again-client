@@ -7,14 +7,21 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jih",
-  "license": "ISC",
+  "license": "GPL",
   "main": "app/index.html",
   "window": {
+    "title": "Again",
     "toolbar": true,
+    "frame": true,
+    "as_deskop": true,
+    "resizable": true,
+    "always-on-top": false,
+    "fullscreen": false,
+    "position": "center",
     "width": 1024,
-    "height": 700,
-    "min_height": 400,
-    "min_width": 400
+    "height": 800,
+    "min_width": 400,
+    "min_height": 400
   },
   "dependencies": {
     "mysql": "^2.5.5",

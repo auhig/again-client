@@ -1,3 +1,5 @@
+'use strict';
+
 var Sequelize = require('sequelize');
 var database = require('../config').database;
 
@@ -14,7 +16,9 @@ var sequelize = new Sequelize(
 
 // 模型定义文件名
 var models = [
-    'user'
+    'user',
+    'word',
+    'wordbook'
 ];
 
 // 注册模型
@@ -28,11 +32,8 @@ models.forEach(function (model) {
 
 // 描述实体间依赖关系
 (function (m) {
-
+    m.Word.belongsTo(m.Wordbook);
+    m.Wordbook.hasMany(m.Word, {as: 'Words'});
 })(module.exports);
-
-sequelize.sync().then(function () {
-    console.info('All modal sync over.');
-});
 
 module.exports.sequelize = sequelize;

@@ -1,5 +1,10 @@
 'use strict';
 
+var gui = require('nw.gui');
+
+var win = gui.Window.get();
+win.maximize();
+
 //angular.module('myApp', [
 //  'ngRoute'
 //]).
@@ -9,3 +14,5 @@
 //}]);
 
 require('./models').sequelize.sync();
+
+
